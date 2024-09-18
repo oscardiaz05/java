@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación de Exámenes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Aplicación de Exámenes</h1>
+        <div id="setup">
+            <label for="numQuestions">Número de preguntas:</label>
+            <input type="number" id="numQuestions" min="1" value="10">
+            
+            <label for="topic">Tema:</label>
+            <select id="topic">
+                <option value="todos">Todos los temas</option>
+                <!-- Otros temas se agregarán dinámicamente con JavaScript -->
+            </select>
+            
+            <button id="startExam">Comenzar Examen</button>
+        </div>
+        
+        <div id="exam" style="display: none;">
+            <div id="questions"></div>
+            <button id="submitExam">Enviar Examen</button>
+        </div>
+        
+        <div id="results" style="display: none;">
+            <h2>Resultados</h2>
+            <p>Puntuación: <span id="score"></span></p>
+            <button id="restartExam">Reiniciar</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
